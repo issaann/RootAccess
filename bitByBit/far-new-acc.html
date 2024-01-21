@@ -14,7 +14,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh; /* Set a minimum height to ensure scrolling */
         }
 
         #details {
@@ -23,6 +23,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
             width: 400px;
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
         }
 
         h2 {
@@ -31,7 +32,7 @@
             padding: 15px;
             margin: 0;
             text-align: center;
-            border-radius: 10px 10px 0 0; /* Adjusted border-radius */
+            border-radius: 10px 10px 0 0;
             margin-bottom: 20px;
         }
 
@@ -75,28 +76,27 @@
 </head>
 
 <body>
-    <section>
-        <div id="details">
-            <h2>Create A New Account</h2>
-            <label for="farmerUsername"><h3>Username:</h3></label>
-            <input type="text" id="farmerUsername">
-            <label for="farmeremail"><h3>Email Address:</h3></label>
-            <input type="text" id="farmeremail">
-            <label for="farmerphone"><h3>Phone No:</h3></label>
-            <input type="text" id="farmerphone">
-            <label for="farmerPassword"><h3>Password:</h3></label>
-            <input type="password" id="farmerPassword">
-            <label for="farmerConfirmPassword"><h3>Confirm Password:</h3></label>
-            <input type="password" id="farmerConfirmPassword">
+    <div id="details">
+        <h2>Create A New Account</h2>
+        <label for="farmerUsername"><h3>Username:</h3></label>
+        <input type="text" id="farmerUsername">
+        <label for="farmeremail"><h3>Email Address:</h3></label>
+        <input type="text" id="farmeremail">
+        <label for="farmerphone"><h3>Phone No:</h3></label>
+        <input type="text" id="farmerphone">
+        <label for="farmerPassword"><h3>Password:</h3></label>
+        <input type="password" id="farmerPassword">
+        <label for="farmerConfirmPassword"><h3>Confirm Password:</h3></label>
+        <input type="password" id="farmerConfirmPassword">
 
-            <section id="language-selection">
-                <h3>Select Language:</h3>
-                <select id="language-dropdown" onchange="changeLanguage()">
-                    <option value="en">English</option>
-                    <option value="es">Assamese</option>
-                    <option value="fr">Bangla</option>
-                     <option value="fr">Bodo</option>
-          <option value="fr">Dogri</option>
+        <section id="language-selection">
+            <h3>Select Language:</h3>
+            <select id="language-dropdown" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="es">Assamese</option>
+                <option value="fr">Bangla</option>
+                <option value="fr">Bodo</option>
+                <option value="fr">Dogri</option>
           <option value="fr">Gujrati</option>
           <option value="fr">Hindi</option>
           <option value="fr">Kashmiri</option>
@@ -114,20 +114,16 @@
           <option value="fr">Santhali</option>
           <option value="fr">Sindhi</option>
           <option value="fr">Urdu</option>
-
-                </select>
-            </section>
-
-            <div id="place">
-                <label for="State"><h3>State:</h3></label>
-                <input type="text" id="State">
-                <label for="District"><h3>District:</h3></label>
-                <input type="text" id="District">
-            </div>
-
-            <a href="homepage.html" class="button">Register</a>
+            </select>
+        </section>
+        <div id="place">
+            <label for="State"><h3>State:</h3></label>
+            <input type="text" id="State">
+            <label for="District"><h3>District:</h3></label>
+            <input type="text" id="District">
         </div>
-    </section>
+        <a href="homepage.html" class="button">Register</a>
+    </div>
 </body>
 
 </html>
