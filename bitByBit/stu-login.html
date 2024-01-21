@@ -17,26 +17,33 @@
             height: 100vh;
         }
 
+        section {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 400px;
+        }
+
         h2 {
             background-color: #4CAF50;
             color: white;
-            width: 100%;
             padding: 15px;
             margin: 0;
             text-align: center;
             border-radius: 5px 5px 0 0;
+            margin-bottom: 20px;
         }
 
         label {
             display: block;
-            margin-top: 20px;
             margin-bottom: 5px;
         }
 
         input {
-            width: 100%;
+            width: calc(100% - 20px);
             padding: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 5px;
             box-sizing: border-box;
@@ -60,14 +67,14 @@
 </head>
 
 <body>
-    <div>
+    <section>
         <h2>Student Login</h2>
         <label for="studentUsername"><h3>Username:</h3></label>
         <input type="text" id="studentUsername">
-        <label for="studentPassword"><h3>Password:</h3></label>
+        <label for="studentPhone"><h3>Password:</h3></label>
         <input type="password" id="studentPassword">
         <a href="homepage.html" class="button">Login</a>
-    </div>
+    </section>
 </body>
 
 </html>
